@@ -54,7 +54,7 @@ def contar_moleculas_unicas(arquivo, coluna_molecula, coluna_bioatividade, colun
         print("Ocorreu um erro inesperado:", e)
 
 # Exemplo de uso
-arquivo = "planilha_base_oficial.xlsx"  # Arquivo de entrada no formato XLSX
+arquivo = "DB_NPAtlas.xlsx"  # Arquivo de entrada no formato XLSX
 coluna_molecula = "molecula"
 coluna_bioatividade = "bioatividade"
 coluna_id = "ID"

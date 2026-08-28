@@ -51,7 +51,7 @@ def contar_moleculas_unicas(arquivo, coluna_molecula, coluna_habitat, coluna_gen
         return pd.DataFrame()  # Retorna DataFrame vazio
 
 # Exemplo de uso
-arquivo = "planilha_base_oficial.xlsx"
+arquivo = "DB_NPAtlas.xlsx"
 coluna_molecula = "molecula"
 coluna_habitat = "habitat"
 coluna_genero = "genero"

@@ -61,43 +61,63 @@ def clean_climate_en(clim_str):
     return "Unknown"
 
 normalized_country_map_en = {
-    'brasil': 'South America', 'brazil': 'South America', 'colombia': 'South America', 'argentina': 'South America', 
-    'chile': 'South America', 'peru': 'South America', 'equador': 'South America', 'venezuela': 'South America', 
+    # South America
+    'brasil': 'South America', 'brazil': 'South America', 'colombia': 'South America', 'argentina': 'South America',
+    'chile': 'South America', 'peru': 'South America', 'equador': 'South America', 'venezuela': 'South America',
     'uruguai': 'South America', 'bolivia': 'South America', 'guiana francesa': 'South America',
-    'eua': 'North America', 'usa': 'North America', 'united states': 'North America', 'canada': 'North America', 
+    # North America
+    'eua': 'North America', 'usa': 'North America', 'united states': 'North America', 'canada': 'North America',
     'mexico': 'North America', 'bermuda': 'North America',
-    'panama': 'Central America', 'costa rica': 'Central America', 'curacao': 'Central America', 'porto rico': 'Central America', 
-    'bahamas': 'Central America', 'belize': 'Central America', 'guatemala': 'Central America', 'cuba': 'Central America', 
-    'jamaica': 'Central America', 'honduras': 'Central America', 'granada': 'Central America', 'ilhas virgens': 'Central America',
-    'china': 'Asia', 'japao': 'Asia', 'japan': 'Asia', 'india': 'Asia', 'coreia': 'Asia', 'korea': 'Asia', 
-    'south korea': 'Asia', 'tailandia': 'Asia', 'vietna': 'Asia', 'indonesia': 'Asia', 'israel': 'Asia', 
-    'singapura': 'Asia', 'malasia': 'Asia', 'filipinas': 'Asia', 'taiwan': 'Asia', 'ira': 'Asia', 'arabia saudita': 'Asia', 
-    'turquia': 'Asia', 'sri lanka': 'Asia', 'myanmar': 'Asia', 'mongolia': 'Asia', 'qatar': 'Asia', 'hong kong': 'Asia', 
-    'nepal': 'Asia', 'palestina': 'Asia', 'kuwait': 'Asia', 'libano': 'Asia', 'jordania': 'Asia', 'omam': 'Asia',
-    'australia': 'Oceania', 'nova zelandia': 'Oceania', 'papua nova guine': 'Oceania', 'guam': 'Oceania', 'palau': 'Oceania', 
-    'fiji': 'Oceania', 'saipan': 'Oceania', 'micronesia': 'Oceania', 'polinesia': 'Oceania', 'oahu': 'Oceania', 
-    'samoa': 'Oceania', 'tahiti': 'Oceania', 'moorea': 'Oceania', 'enewetak': 'Oceania', 'tabuaeran': 'Oceania', 
-    'ilhas marshall': 'Oceania', 'atol palmyra': 'Oceania', 'ilhas marianas': 'Oceania', 'vanuatu': 'Oceania', 'ilhas salomao': 'Oceania',
-    'alemanha': 'Europe', 'germany': 'Europe', 'franca': 'Europe', 'france': 'Europe', 'espanha': 'Europe', 
-    'spain': 'Europe', 'italia': 'Europe', 'italy': 'Europe', 'portugal': 'Europe', 'reino unido': 'Europe', 
-    'uk': 'Europe', 'holanda': 'Europe', 'netherlands': 'Europe', 'grecia': 'Europe', 'republica tcheca': 'Europe', 
-    'hungria': 'Europe', 'suica': 'Europe', 'austria': 'Europe', 'polonia': 'Europe', 'croacia': 'Europe', 
-    'irlanda': 'Europe', 'noruega': 'Europe', 'suecia': 'Europe', 'dinamarca': 'Europe', 'russia': 'Europe', 
-    'finlandia': 'Europe', 'islandia': 'Europe', 'ilhas canarias': 'Europe', 'belgica': 'Europe', 'chipre': 'Europe', 
-    'eslovenia': 'Europe', 'servia': 'Europe', 'malta': 'Europe',
-    'egito': 'Africa', 'africa do sul': 'Africa', 'marrocos': 'Africa', 'quenia': 'Africa', 'madagascar': 'Africa', 
-    'nigeria': 'Africa', 'tunisia': 'Africa', 'gana': 'Africa', 'camaroes': 'Africa', 'uganda': 'Africa', 
-    'republica centro-africana': 'Africa', 'prasilin': 'Africa', 'argelia': 'Africa', 'tanzania': 'Africa',
-    'seychelles': 'Africa', 'cabo verde': 'Africa', 'cape verde': 'Africa',
-    'antartica': 'Antarctica', 'antarctica': 'Antarctica'
+    # Central America & Caribbean
+    'panama': 'Central America', 'costa rica': 'Central America', 'curacao': 'Central America',
+    'porto rico': 'Central America', 'bahamas': 'Central America', 'belize': 'Central America',
+    'guatemala': 'Central America', 'cuba': 'Central America', 'jamaica': 'Central America',
+    'honduras': 'Central America', 'granada': 'Central America', 'ilhas virgens': 'Central America',
+    'ilhas virgens americanas': 'Central America',
+    # Asia
+    'china': 'Asia', 'japao': 'Asia', 'japan': 'Asia', 'india': 'Asia', 'coreia': 'Asia', 'korea': 'Asia',
+    'south korea': 'Asia', 'tailandia': 'Asia', 'vietna': 'Asia', 'indonesia': 'Asia', 'israel': 'Asia',
+    'singapura': 'Asia', 'malasia': 'Asia', 'malaysia': 'Asia', 'filipinas': 'Asia', 'taiwan': 'Asia',
+    'ira': 'Asia', 'arabia saudita': 'Asia', 'turquia': 'Asia', 'sri lanka': 'Asia', 'myanmar': 'Asia',
+    'mongolia': 'Asia', 'qatar': 'Asia', 'hong kong': 'Asia', 'nepal': 'Asia', 'palestina': 'Asia',
+    'kuwait': 'Asia', 'libano': 'Asia', 'jordania': 'Asia', 'omam': 'Asia',
+    # Oceania
+    'australia': 'Oceania', 'nova zelandia': 'Oceania', 'papua nova guine': 'Oceania', 'guam': 'Oceania',
+    'palau': 'Oceania', 'fiji': 'Oceania', 'saipan': 'Oceania', 'micronesia': 'Oceania', 'polinesia': 'Oceania',
+    'oahu': 'Oceania', 'samoa': 'Oceania', 'samoa americana': 'Oceania', 'tahiti': 'Oceania', 'moorea': 'Oceania',
+    'enewetak': 'Oceania', 'tabuaeran': 'Oceania', 'ilhas marshall': 'Oceania', 'atol palmyra': 'Oceania',
+    'ilhas marianas': 'Oceania', 'vanuatu': 'Oceania', 'ilhas salomao': 'Oceania',
+    # Europe
+    'alemanha': 'Europe', 'germany': 'Europe', 'franca': 'Europe', 'france': 'Europe', 'espanha': 'Europe',
+    'spain': 'Europe', 'italia': 'Europe', 'italy': 'Europe', 'portugal': 'Europe', 'reino unido': 'Europe',
+    'uk': 'Europe', 'holanda': 'Europe', 'netherlands': 'Europe', 'paises baixos': 'Europe', 'grecia': 'Europe',
+    'republica tcheca': 'Europe', 'hungria': 'Europe', 'suica': 'Europe', 'austria': 'Europe', 'polonia': 'Europe',
+    'croacia': 'Europe', 'irlanda': 'Europe', 'noruega': 'Europe', 'suecia': 'Europe', 'dinamarca': 'Europe',
+    'russia': 'Europe', 'finlandia': 'Europe', 'islandia': 'Europe', 'ilhas canarias': 'Europe', 'belgica': 'Europe',
+    'chipre': 'Europe', 'eslovenia': 'Europe', 'slovenia': 'Europe', 'servia': 'Europe', 'malta': 'Europe',
+    'escocia': 'Europe', 'inglaterra': 'Europe',
+    # Africa
+    'egito': 'Africa', 'africa do sul': 'Africa', 'marrocos': 'Africa', 'quenia': 'Africa', 'kenya': 'Africa',
+    'madagascar': 'Africa', 'nigeria': 'Africa', 'tunisia': 'Africa', 'gana': 'Africa', 'camaroes': 'Africa',
+    'uganda': 'Africa', 'republica centro-africana': 'Africa', 'prasilin': 'Africa', 'argelia': 'Africa',
+    'tanzania': 'Africa', 'seychelles': 'Africa', 'cabo verde': 'Africa', 'cape verde': 'Africa',
+    # Antarctica
+    'antartica': 'Antarctica', 'antarctica': 'Antarctica',
 }
+
+# Conjunto de keys que são seguras para busca parcial (comprimento >= 6, sem risco de falso-positivo)
+_SAFE_PARTIAL_KEYS = {k: v for k, v in normalized_country_map_en.items() if len(k) >= 6}
 
 def get_continent_en(pais_str):
     if not isinstance(pais_str, str): return "Others"
     p_clean = normalize_str(pais_str)
-    if p_clean in normalized_country_map_en: return normalized_country_map_en[p_clean]
-    for k, v in normalized_country_map_en.items():
-        if len(k) > 4 and k in p_clean: return v
+    # 1. Match exato (inclui keys curtas como 'ira', 'uk')
+    if p_clean in normalized_country_map_en:
+        return normalized_country_map_en[p_clean]
+    # 2. Busca parcial apenas com keys longas (>= 6 chars), evitando falsos-positivos
+    for k, v in _SAFE_PARTIAL_KEYS.items():
+        if k in p_clean:
+            return v
     return "Others"
 
 col_hab, col_pais, col_clima, col_count = 'habitat', 'pais', 'clima', 'Contagem'
